@@ -1,0 +1,23 @@
+databases:
+  - name: design_system_figma
+    databaseName: design_system_figma
+    user: design_system_figma
+    plan: free
+
+services:
+  - type: web
+    name: design_system_figma
+    runtime: ruby
+    plan: free
+    buildCommand: "./bin/render-build.sh"
+    # preDeployCommand: "bundle exec rails db:migrate" # preDeployCommand only available on paid instance types
+    startCommand: "bundle exec rails server"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: design_system_figma
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
+      - key: WEB_CONCURRENCY
+        value: 2 # sensible default
