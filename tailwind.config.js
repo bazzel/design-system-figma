@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+const myTheme = require("./theme");
 const myColors = require("./colors");
 
 module.exports = require("tailwind-mode-aware-colors")({
@@ -10,10 +12,10 @@ module.exports = require("tailwind-mode-aware-colors")({
   ],
   theme: {
     colors: myColors.colors,
-    // fontSize: kabisaTheme.fontSize,
-    // extend: {
-    // fontFamily: kabisaTheme.fontFamily,
-    // },
+    fontSize: myTheme.fontSize,
+    extend: {
+      fontFamily: myTheme.fontFamily,
+    },
   },
   plugins: [
     require("@tailwindcss/forms"),
