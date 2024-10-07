@@ -1,9 +1,9 @@
 <a
-  class="flex flex-col max-w-md gap-5 p-4 transition rounded shadow-sm  hover:shadow-lg group bg-background-50"
-  href='#'
+  class="flex flex-col max-w-sm gap-5 p-4 transition rounded shadow-sm  hover:scale-105 hover:shadow-lg focus:scale-105 focus:shadow-lg group bg-background-50"
+  href='<%= @link %>'
 >
   <div class="relative">
-    <%= image_tag(@image, class: "aspect-video rounded-md") %>
+    <%= image_tag(@image, class: "object-cover h-40 w-full rounded-md") %>
     <div class="absolute right-3 top-3">
       <%= render(TagComponent.new(label: "Nieuws", icon: "newspaper")) %>
     </div>
@@ -12,15 +12,17 @@
     <div class="mb-2">
       <%= render(SubtitleComponent.new(title: @title, level: 2)) %>
     </div>
-    <p><%= content %></p>
+    <p><%= content.truncate(120, separator: " ") %></p>
   </div>
   <div class="flex flex-row items-center gap-5">
     <%= render(AvatarComponent.new(image: @avatar)) %>
     <div class="flex flex-col grow">
-      <strong><%= @author %></strong>
-      <div><%= @role %></div>
+      <p class="mb-0 line-clamp-1">
+        <strong><%= @author %></strong>
+      </p>
+      <p class="mb-0 line-clamp-1"><%= @role %></p>
     </div>
     <%= inline_svg_tag "icons/solid/arrows/caret-right.svg",
-    class: "w-4 h-4 group-hover:text-primary-400" %>
+    class: "w-4 h-4 group-hover:text-primary-400 group-focus:text-primary-400" %>
   </div>
 </a>
