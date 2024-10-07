@@ -1,0 +1,26 @@
+<a
+  class="
+    flex flex-col max-w-sm gap-5 p-4 transition rounded shadow-sm hover:scale-105
+    hover:shadow-lg focus:scale-105 focus:shadow-lg group bg-background-50
+  "
+  href='<%= @link %>'
+>
+  <%= image_tag(@image, class: "object-cover h-40 w-full rounded-md") %>
+  <div>
+    <div class="mb-2">
+      <%= render(SubtitleComponent.new(title: @title, level: 2)) %>
+    </div>
+    <div class='flex flex-col gap-y-1'>
+      <% specs.each do |spec| %>
+        <div class='flex items-baseline gap-x-2'>
+          <%= inline_svg_tag spec[:icon], class: "w-4 h-4 text-primary-400 shrink-0" %>
+          <span><%= spec[:text] %></span>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="flex flex-row items-center justify-end gap-5">
+    <%= inline_svg_tag "icons/solid/arrows/caret-right.svg",
+    class: "w-4 h-4 group-hover:text-primary-400 group-focus:text-primary-400" %>
+  </div>
+</a>

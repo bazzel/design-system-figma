@@ -1,5 +1,5 @@
 <div class="flex flex-wrap items-start gap-4">
-  <% 5.times do %>
+  <% 1.times do %>
     <%= render(
       NewsItemComponent.new(
         title: Faker::Quote.famous_last_words,
@@ -8,6 +8,20 @@
         avatar: Faker::Avatar.image,
         role: Faker::Superhero.descriptor,
         link: "https://www.kabisa.nl",
+      ),
+    ) do %>
+      <%= Faker::Lorem.sentences(number: 6 + Random.new.rand(6)).join(" ") %>
+    <% end %>
+  <% end %>
+  <% 2.times do %>
+    <%= render(
+      VacancyComponent.new(
+        title: 'Cloud Architect',
+        image: "https://picsum.photos/640/360",
+        skills: 'AWS, Azure, Kubernetes, AWS, Azure, Kubernetes, AWS, Azure, Kubernetes',
+        experience: '5+ years',
+        location: 'Office & Remote',
+        link: "https://kabisa.nl/jobs/",
       ),
     ) do %>
       <%= Faker::Lorem.sentences(number: 6 + Random.new.rand(6)).join(" ") %>
