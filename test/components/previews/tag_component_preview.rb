@@ -9,7 +9,7 @@ class TagComponentPreview < ViewComponent::Preview
 
   private
   def available_icons
-    icons = Rails.root.join("app/assets/images/icons").glob("*.svg").map { |f| f.basename(".svg") }
+    icons = Rails.root.join("app/assets/images/icons/outline/general").glob("*.svg").map { |f| f.basename(".svg") }
     icons.unshift(nil)
   end
 end

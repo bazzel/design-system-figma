@@ -23,5 +23,7 @@ module DesignSystemFigma
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+
+    config.view_component.generate.sidecar = true
   end
 end

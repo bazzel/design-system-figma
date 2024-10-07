@@ -1,0 +1,16 @@
+<div class="flex flex-wrap gap-4">
+  <% 5.times do %>
+    <%= render(
+      NewsItemComponent.new(
+        title: Faker::Quote.famous_last_words,
+        image: "https://picsum.photos/640/360",
+        author: Faker::Superhero.name,
+        avatar: Faker::Avatar.image,
+        role: Faker::Superhero.descriptor,
+        link: "https://www.kabisa.nl",
+      ),
+    ) do %>
+      <%= Faker::Lorem.sentences(number: 6 + Random.new.rand(6)).join(" ").truncate(120) %>
+    <% end %>
+  <% end %>
+</div>
