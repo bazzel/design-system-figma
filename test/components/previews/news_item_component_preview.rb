@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# @hidden
 class NewsItemComponentPreview < ViewComponent::Preview
   DEFAULT_TITLE = "Codecation 2023: Code, Leren, Bier & Plezier! 🎉"
   DEFAULT_IMAGE = "https://kabisa.nl/wp-content/uploads/2023/11/image1.png"

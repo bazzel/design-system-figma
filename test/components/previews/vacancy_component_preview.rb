@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# @hidden
 class VacancyComponentPreview < ViewComponent::Preview
   DEFAULT_TITLE = "Cloud Architect"
   DEFAULT_IMAGE = "https://kabisa.nl/wp-content/uploads/2023/01/Foto-Jur-CLoud-Legends-768x512.jpeg"
