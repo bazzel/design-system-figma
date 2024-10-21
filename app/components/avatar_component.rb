@@ -8,7 +8,7 @@ class AvatarComponent < ViewComponent::Base
 
   private
   def image_class_selectors
-    class_selectors = [ "inline-block",  "rounded-full", "border", "border-background-200" ]
+    class_selectors = [ "inline-block",  "rounded-full", "border", "border-neutral-200" ]
 
     case @size.to_sym
     when :small
