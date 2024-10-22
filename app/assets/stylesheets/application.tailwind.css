@@ -49,3 +49,24 @@
     @apply text-sm;
   }
 }
+
+@layer components {
+  .btn {
+    @apply flex items-center gap-1 px-5 py-3 font-semibold leading-tight tracking-tight transition rounded disabled:opacity-30;
+  }
+  .btn-primary {
+    @apply bg-primary-400 text-text-50 hover:bg-primary-300 active:bg-primary-400/55 disabled:bg-primary-500;
+  }
+  .btn-secondary {
+    @apply bg-background-400 text-text-950 hover:bg-background-300 active:bg-background-400/55 disabled:bg-background-500;
+  }
+  .btn-accent {
+    @apply bg-accent-400 text-text-50 hover:bg-accent-300 active:bg-accent-400/55 disabled:bg-accent-500;
+  }
+  .btn-ghost {
+    @apply hover:bg-background-100/50 active:bg-background-100/70;
+  }
+  .btn-link {
+    @apply font-normal hover:underline active:opacity-70 disabled:hover:no-underline;
+  }
+}
