@@ -27,7 +27,7 @@ class CardComponent < ViewComponent::Base
   end
 
   def container_class_selectors
-    class_selectors = [ "block", "max-w-sm", "p-4", "rounded", "shadow-sm", "bg-neutral-50" ]
+    class_selectors = [ "block", "max-w-sm", "p-4", "rounded", "shadow-sm", "bg-background-100/50" ]
 
     if @link
       class_selectors << [ "transition", "hover:scale-105", "hover:shadow-lg", "focus:scale-105", "focus:shadow-lg", "group" ]
