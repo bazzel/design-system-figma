@@ -1,61 +1,38 @@
 class ButtonPreview < Lookbook::Preview
+  layout "button_preview"
+  # Consult the **HTML** tab for the proper HTML code to use in your application.
   def primary
-    render "pages/primary"
+    render_button
   end
 
-  def primary_disabled
-    render "pages/primary_disabled"
-  end
-
-  def primary_with_icon
-    render "pages/primary_with_icon"
-  end
-
+  # Consult the **HTML** tab for the proper HTML code to use in your application.
   def secondary
-    render "pages/secondary"
+    render_button
   end
 
-  def secondary_disabled
-    render "pages/secondary_disabled"
+  # Consult the **HTML** tab for the proper HTML code to use in your application.
+  def tertiary
+    render_button
   end
 
-  def secondary_with_icon
-    render "pages/secondary_with_icon"
-  end
-
+  # Consult the **HTML** tab for the proper HTML code to use in your application.
   def accent
-    render "pages/accent"
+    render_button
   end
 
-  def accent_disabled
-    render "pages/accent_disabled"
-  end
-
-  def accent_with_icon
-    render "pages/accent_with_icon"
-  end
-
+  # Consult the **HTML** tab for the proper HTML code to use in your application.
   def ghost
-    render "pages/ghost"
+    render_button
   end
 
-  def ghost_disabled
-    render "pages/ghost_disabled"
-  end
-
-  def ghost_with_icon
-    render "pages/ghost_with_icon"
-  end
-
+  # Consult the **HTML** tab for the proper HTML code to use in your application.
   def text_link
-    render "pages/text_link"
+    render_button
   end
 
-  def text_link_disabled
-    render "pages/text_link_disabled"
-  end
-
-  def text_link_with_icon
-    render "pages/text_link_with_icon"
+  private
+  def render_button
+    calling_method = caller[0][/`.*'/][1..-2]
+    render "pages/#{calling_method}"
   end
 end

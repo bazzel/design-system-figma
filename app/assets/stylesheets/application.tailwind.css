@@ -58,7 +58,10 @@
     @apply bg-primary-400 text-text-50 hover:bg-primary-300 active:bg-primary-400/55 disabled:bg-primary-500;
   }
   .btn-secondary {
-    @apply bg-background-400 text-text-950 hover:bg-background-300 active:bg-background-400/55 disabled:bg-background-500;
+    @apply bg-tertiary-100 text-text-950 hover:bg-tertiary-100/70 active:bg-tertiary-100/55 disabled:bg-tertiary-200;
+  }
+  .btn-tertiary {
+    @apply bg-tertiary-950 text-text-50 hover:bg-text-50 hover:text-tertiary-950 active:bg-text-50 active:text-tertiary-950/70 disabled:bg-text-50 disabled:text-tertiary-950/70;
   }
   .btn-accent {
     @apply bg-accent-400 text-text-50 hover:bg-accent-300 active:bg-accent-400/55 disabled:bg-accent-500;
@@ -68,5 +71,13 @@
   }
   .btn-link {
     @apply font-normal hover:underline active:opacity-70 disabled:hover:no-underline;
+  }
+
+  .btn-lg {
+    @apply px-6 py-4;
+  }
+
+  .btn-cta {
+    @apply hover:scale-110 active:scale-110;
   }
 }
