@@ -6,7 +6,7 @@
 
 @layer base {
   html {
-    @apply font-poppins text-primary-950 bg-background-50;
+    @apply font-poppins text-text-950 bg-background-50;
   }
 
   body {
