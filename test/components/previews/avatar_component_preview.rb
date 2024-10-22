@@ -1,15 +1,15 @@
 # frozen_string_literal: true
 
 class AvatarComponentPreview < ViewComponent::Preview
-  # @param image
-  # @param size select :available_sizes
-  def default(image: Faker::Avatar.image, size: nil)
-    render(AvatarComponent.new(image:, size:))
+  def small
+    render(AvatarComponent.new(image: Faker::Avatar.image, size: :small))
   end
 
-  private
-  def available_sizes
-    sizes = [ :small, :medium, :large ]
-    sizes.unshift(nil)
+  def medium
+    render(AvatarComponent.new(image: Faker::Avatar.image, size: :medium))
+  end
+
+  def large
+    render(AvatarComponent.new(image: Faker::Avatar.image, size: :large))
   end
 end
